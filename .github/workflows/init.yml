@@ -23,10 +23,7 @@ jobs:
   create-repository:
     runs-on: ubuntu-latest
     name: Creating Organization Repository
-    steps:
-      - name: Use Checkout
-        uses: actions/checkout@main
-        
+    steps:       
       - name: Replace Variables
         uses: falnyr/replace-env-vars-action@master
         env:
