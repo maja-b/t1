@@ -32,7 +32,7 @@ jobs:
           THEME_NAME: "${{ github.event.inputs.theme-name }}"
           CHILD_THEME_NAME: "${{ github.event.inputs.child-name }}"
         with:
-          filename: index.html
+          filename: ./index.html
           
       - name: Git Commit/Push Changes
         uses: actions-x/commit@v1
