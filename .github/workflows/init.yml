@@ -26,6 +26,7 @@ jobs:
     steps:
       - name: Use Checkout
         uses: actions/checkout@main
+        
       - name: Replace Variables
         uses: falnyr/replace-env-vars-action@master
         env:
@@ -35,5 +36,8 @@ jobs:
           CHILD_THEME_NAME: "${{ github.event.inputs.child-name }}"
         with:
           filename: index.html
+          
+      - name: Git Commit/Push Changes
+        uses: actions-x/commit@v1
 
 
